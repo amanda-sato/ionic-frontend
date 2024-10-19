@@ -15,16 +15,8 @@ import {
 } from '@ionic/react';
 import { searchCircleOutline } from 'ionicons/icons';
 
-const DoramaList: React.FC = () => {
+const DoramaList: React.FC<{ products: { id: number, name: string, description: string, image: string}[] }> = ({ products }) => {
   const [search, setSearch] = useState('');
-
-  const products = [
-    { id: 1, name: "Goblin" },
-    { id: 2, name: "Descendentes do Sol" },
-    { id: 3, name: "Somente por amor" },
-    { id: 4, name: "Amor entre Fada e Demônio" },
-    { id: 5, name: "Pousando no amor" },
-  ];
 
   function handleSearchChange(ev: Event) {
     let search = '';

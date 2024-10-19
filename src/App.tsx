@@ -39,7 +39,7 @@ import './theme/variables.css';
 
 setupIonicReact();
 
-const App: React.FC = () => (
+const App: React.FC<{ products: { id: number, name: string, description: string, image: string }[] }> = ({ products }) => (
   <IonApp>
     <IonReactRouter>
       <IonTabs>
@@ -48,10 +48,10 @@ const App: React.FC = () => (
             <Tab1 />
           </Route>
           <Route exact path="/doramas">
-            <DoramaList />
+            <DoramaList products={products}/>
           </Route>
           <Route exact path="/doramas/detail/:productId">
-            <DoramaDetail />
+            <DoramaDetail products={products} />
           </Route>
           <Route exact path="/">
             <Redirect to="/tab1" />
