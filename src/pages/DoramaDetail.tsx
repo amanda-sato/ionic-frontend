@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import { IonBackButton, IonButtons, IonHeader, IonContent, IonToolbar, IonTitle, IonButton, IonPage } from '@ionic/react';
 import React from 'react';
 
-const Tab3: React.FC = () => {
+const DoramaDetail: React.FC = () => {
   const { productId } = useParams<{ productId: string }>();
 
   const products = [
@@ -68,7 +68,7 @@ const Tab3: React.FC = () => {
         />
         <h1>{product.name}</h1>
         <p>{product.description}</p>
-        <IonButton expand="full" routerLink="/tab2" style={{ marginTop: '20px' }}>
+        <IonButton expand="full" routerLink="/doramas" style={{ marginTop: '20px' }}>
           Voltar para Lista de Doramas
         </IonButton>
       </IonContent>
@@ -76,4 +76,4 @@ const Tab3: React.FC = () => {
   );
 };
 
-export default Tab3;
+export default DoramaDetail;

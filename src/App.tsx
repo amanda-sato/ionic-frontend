@@ -12,8 +12,8 @@ import {
 import { IonReactRouter } from '@ionic/react-router';
 import { car, heart, home } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
-import Tab2 from './pages/Tab2';
-import Tab3 from './pages/Tab3';
+import DoramaList from './pages/DoramaList';
+import DoramaDetail from './pages/DoramaDetail';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -47,11 +47,11 @@ const App: React.FC = () => (
           <Route exact path="/tab1">
             <Tab1 />
           </Route>
-          <Route exact path="/tab2">
-            <Tab2 />
+          <Route exact path="/doramas">
+            <DoramaList />
           </Route>
-          <Route exact path="/tab2/tab3/:productId">
-            <Tab3 />
+          <Route exact path="/doramas/detail/:productId">
+            <DoramaDetail />
           </Route>
           <Route exact path="/">
             <Redirect to="/tab1" />
@@ -62,9 +62,9 @@ const App: React.FC = () => (
             <IonIcon aria-hidden="true" icon={home} />
             <IonLabel>Home Page</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
+          <IonTabButton tab="doramas" href="/doramas">
             <IonIcon aria-hidden="true" icon={heart} />
-            <IonLabel>Tab 2</IonLabel>
+            <IonLabel>Doramas</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
