@@ -27,7 +27,7 @@ const DoramaDetail: React.FC<{ products: { id: number, name: string, description
           <IonButtons slot="start">
             <IonBackButton />
           </IonButtons>
-          <IonTitle>{product.name}</IonTitle>
+          <IonTitle className="header-title">{product.name}</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding" style={{ textAlign: 'center', maxHeight: '80vh', overflowY: 'auto' }}>
