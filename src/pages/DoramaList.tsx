@@ -36,6 +36,9 @@ const DoramaList: React.FC<{ products: { id: number, name: string, description: 
     <IonPage>
       <IonHeader>
         <IonToolbar>
+        <IonButtons slot="start">
+            <IonBackButton />
+          </IonButtons>
           <IonTitle className="header-title">Doramas</IonTitle>
         </IonToolbar>
 

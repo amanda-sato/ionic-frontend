@@ -62,10 +62,6 @@ const App: React.FC<{ products: { id: number, name: string, description: string,
             <IonIcon aria-hidden="true" icon={home} />
             <IonLabel>Home Page</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="doramas" href="/doramas">
-            <IonIcon aria-hidden="true" icon={heart} />
-            <IonLabel>Doramas</IonLabel>
-          </IonTabButton>
         </IonTabBar>
       </IonTabs>
     </IonReactRouter>
