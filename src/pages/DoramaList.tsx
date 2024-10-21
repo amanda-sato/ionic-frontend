@@ -11,7 +11,8 @@ import {
   IonButton,
   IonSearchbar,
   IonItem,
-  IonPage
+  IonPage,
+  IonFooter
 } from '@ionic/react';
 import { searchCircleOutline } from 'ionicons/icons';
 
@@ -35,7 +36,7 @@ const DoramaList: React.FC<{ products: { id: number, name: string, description: 
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Doramas</IonTitle>
+          <IonTitle className="header-title">Doramas</IonTitle>
         </IonToolbar>
 
         <>
@@ -63,6 +64,20 @@ const DoramaList: React.FC<{ products: { id: number, name: string, description: 
             </IonButton>
           ))}
       </IonContent>
+
+      <IonFooter>
+        <IonToolbar style={{ padding: '5px 16px' }}>
+          <p className="footer-text" style={{ margin: '0' }}> 
+            © 2024 Dorama Platform - All Rights Reserved
+          </p>
+          <div className="footer-links">
+            <IonButton fill="clear">Privacy Policy</IonButton>
+            <IonButton fill="clear">Terms of Use</IonButton>
+            <IonButton fill="clear">Contact</IonButton>
+          </div>
+        </IonToolbar>
+      </IonFooter>
+
     </IonPage>
   );
 };

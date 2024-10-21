@@ -1,0 +1,24 @@
+.header-title {
+    font-size: 1.8em;
+    color: #4A90E2; 
+    font-weight: bold;
+  }
+  
+  .header-menu {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; 
+    margin-left: auto; 
+  }
+  
+  .header-button {
+    font-size: 1em;
+    color: #333; 
+    padding: 10px 15px; 
+    transition: color 0.3s; 
+  }
+  
+  .header-button:hover {
+    color: #4A90E2; 
+    text-decoration: underline; 
+  }

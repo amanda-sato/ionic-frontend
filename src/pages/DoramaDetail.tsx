@@ -6,11 +6,12 @@ import { IonBackButton, IonButtons, IonHeader, IonContent, IonToolbar, IonTitle,
   IonCardSubtitle, 
   IonCardTitle,
   IonGrid,
-  IonRow
+  IonRow,
+  IonFooter
  } from '@ionic/react';
 import React from 'react';
 
-const DoramaDetail: React.FC<{ products: { id: number, name: string, description: string, image: string}[] }> = ({ products }) => {
+const DoramaDetail: React.FC<{ products: { id: number, name: string, description: string, pontuation: string, image: string}[]}> = ({ products }) => {
   const { productId } = useParams<{ productId: string }>();
   
   const product = products.find(p => p.id === parseInt(productId));
@@ -50,6 +51,9 @@ const DoramaDetail: React.FC<{ products: { id: number, name: string, description
           <IonCardTitle>{product.name}</IonCardTitle>
         </IonCardHeader>
 
+        <IonCardSubtitle>{product.pontuation}</IonCardSubtitle>
+
+
         <IonCardContent>{product.description}</IonCardContent> 
 
 
@@ -63,6 +67,21 @@ const DoramaDetail: React.FC<{ products: { id: number, name: string, description
       </IonGrid>
 
       </IonContent>
+
+      <IonFooter>
+        <IonToolbar style={{ padding: '5px 16px' }}>
+          <p className="footer-text" style={{ margin: '0' }}> 
+            © 2024 Dorama Platform - All Rights Reserved
+          </p>
+          <div className="footer-links">
+            <IonButton fill="clear">Privacy Policy</IonButton>
+            <IonButton fill="clear">Terms of Use</IonButton>
+            <IonButton fill="clear">Contact</IonButton>
+          </div>
+        </IonToolbar>
+      </IonFooter>
+
+
     </IonPage>
   );
 };

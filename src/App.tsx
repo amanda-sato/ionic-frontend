@@ -39,7 +39,7 @@ import './theme/variables.css';
 
 setupIonicReact();
 
-const App: React.FC<{ products: { id: number, name: string, description: string, image: string }[] }> = ({ products }) => (
+const App: React.FC<{ products: { id: number, name: string, description: string, image: string, pontuation: string }[] }> = ({ products }) => (
   <IonApp>
     <IonReactRouter>
       <IonTabs>
