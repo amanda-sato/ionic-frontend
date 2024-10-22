@@ -22,3 +22,32 @@
     color: #4A90E2; 
     text-decoration: underline; 
   }
+
+
+  ion-radio-group {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+  }
+
+  ion-list {
+      text-align: center; 
+  }
+
+  .custom-radio {
+      --padding-start: 0; 
+      --padding-end: 0; 
+      --inner-padding-end: 0;
+  }
+
+  .custom-radio-input {
+      transform: scale(0.8); 
+  }
+
+  ion-label {
+      font-size: 14px; 
+      color: var(--ion-color-medium); 
+  }
+
+  
+  

@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import {
-  IonModal,
-  IonInput,
   IonBackButton,
   IonButtons,
   IonHeader,
@@ -10,9 +8,15 @@ import {
   IonTitle,
   IonButton,
   IonSearchbar,
-  IonItem,
   IonPage,
-  IonFooter
+  IonFooter,
+  IonItem, 
+  IonList, 
+  IonRadio, 
+  IonRadioGroup,
+  IonCol,
+  IonRow,
+  IonLabel
 } from '@ionic/react';
 import { searchCircleOutline } from 'ionicons/icons';
 
@@ -32,6 +36,8 @@ const DoramaList: React.FC<{ products: { id: number, name: string, description: 
     return product.name.toLocaleLowerCase().includes(search.toLocaleLowerCase());
   }
 
+
+
   return (
     <IonPage style={{ backgroundImage: `url('/sakura.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <IonHeader>
@@ -50,6 +56,46 @@ const DoramaList: React.FC<{ products: { id: number, name: string, description: 
           onIonInput={handleSearchChange}
         />
       </>
+
+      <IonList>
+        <IonRadioGroup value="center">
+          <IonRow>
+            <IonCol size="auto">
+              <IonItem lines="none" className="custom-radio">
+                <IonRadio value="romance" className="custom-radio-input" />
+                <IonLabel>Romance</IonLabel>
+              </IonItem>
+            </IonCol>
+            <IonCol size="auto">
+              <IonItem lines="none" className="custom-radio">
+                <IonRadio value="comedy" className="custom-radio-input" />
+                <IonLabel>Comedy</IonLabel>
+              </IonItem>
+            </IonCol>
+            <IonCol size="auto">
+              <IonItem lines="none" className="custom-radio">
+                <IonRadio value="action" className="custom-radio-input" />
+                <IonLabel>Action</IonLabel>
+              </IonItem>
+            </IonCol>
+            <IonCol size="auto">
+              <IonItem lines="none" className="custom-radio">
+                <IonRadio value="fantasy" className="custom-radio-input" />
+                <IonLabel>Fantasy</IonLabel>
+              </IonItem>
+            </IonCol>
+            <IonCol size="auto">
+              <IonItem lines="none" className="custom-radio">
+                <IonRadio value="drama" className="custom-radio-input" />
+                <IonLabel>Dorama</IonLabel>
+              </IonItem>
+            </IonCol>
+          </IonRow>
+        </IonRadioGroup>
+      </IonList>
+
+
+
 
       </IonHeader>
       <IonContent className="ion-padding">
