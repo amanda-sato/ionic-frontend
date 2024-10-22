@@ -45,7 +45,7 @@ const DoramaList: React.FC<{ products: { id: number, name: string, description: 
         <>
         <IonSearchbar 
           searchIcon={searchCircleOutline} 
-          placeholder="Pesquisa"
+          placeholder="Search"
           value={search}
           onIonInput={handleSearchChange}
         />
@@ -53,7 +53,7 @@ const DoramaList: React.FC<{ products: { id: number, name: string, description: 
 
       </IonHeader>
       <IonContent className="ion-padding">
-        <h1>Lista de Doramas</h1>
+        <h1>Doramas List</h1>
         {products
           .filter(matchesSearch)
           .map(product => (

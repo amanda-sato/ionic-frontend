@@ -58,7 +58,7 @@ const Tab1: React.FC = () => {
             }} 
           />
           <IonCardContent>
-            <h2>Featured Drama ⭐⭐⭐⭐⭐</h2>
+            <h2>Featured Drama: TRUE BEAUTY ⭐⭐⭐⭐⭐</h2>
             <p>Watch the most popular drama now!</p>
             <IonButton expand="block" onClick={toggleVideoModal}>Watch Now</IonButton>
           </IonCardContent>
@@ -70,7 +70,7 @@ const Tab1: React.FC = () => {
               <IonCard className="drama-card">
                 <IonImg 
                   src="./public/marry-my-husband3.jpg" 
-                  alt="Drama 1" 
+                  alt="Marry My Husband" 
                   style={{ 
                     width: '100%', 
                     height: 'auto', 
@@ -78,7 +78,7 @@ const Tab1: React.FC = () => {
                   }} 
                 />
                 <IonCardContent>
-                  <h3>Drama Title 1</h3>
+                  <h3>MARRY MY HUSBAND</h3>
                   <p>⭐⭐⭐⭐⭐</p>
                 </IonCardContent>
               </IonCard>
@@ -87,7 +87,7 @@ const Tab1: React.FC = () => {
               <IonCard className="drama-card">
                 <IonImg 
                   src="./public/casamento-perfeito.jpg" 
-                  alt="Drama 2" 
+                  alt="PERFECT MARRIAGE REVENGE" 
                   style={{ 
                     width: '100%', 
                     height: 'auto', 
@@ -95,7 +95,7 @@ const Tab1: React.FC = () => {
                   }} 
                 />
                 <IonCardContent>
-                  <h3>Drama Title 2</h3>
+                  <h3>PERFECT MARRIAGE REVENGE</h3>
                   <p>⭐⭐⭐⭐☆</p>
                 </IonCardContent>
               </IonCard>
@@ -129,7 +129,7 @@ const Tab1: React.FC = () => {
         <IonHeader>
           <IonToolbar>
             <IonTitle style={{ textAlign: 'center', fontSize: '1.5em', fontWeight: 'bold' }}>Login</IonTitle>
-            <IonButton slot="end" onClick={toggleLoginModal}>Fechar</IonButton>
+            <IonButton slot="end" onClick={toggleLoginModal}>Close</IonButton>
           </IonToolbar>
         </IonHeader>
         <IonContent className="ion-padding">
@@ -140,10 +140,10 @@ const Tab1: React.FC = () => {
                   <IonInput placeholder="Email" type="email" required />
                 </IonItem>
                 <IonItem>
-                  <IonInput placeholder="Senha" type="password" required />
+                  <IonInput placeholder="Password" type="password" required />
                 </IonItem>
               </IonList>
-              <IonButton expand="full" color="primary" onClick={toggleLoginModal}>Entrar</IonButton>
+              <IonButton expand="full" color="primary" onClick={toggleLoginModal}>Log in</IonButton>
             </IonCardContent>
           </IonCard>
         </IonContent>
@@ -152,8 +152,8 @@ const Tab1: React.FC = () => {
       <IonModal isOpen={isVideoOpen} >
         <IonHeader>
           <IonToolbar>
-            <IonTitle style={{ textAlign: 'center' }}>Vídeo</IonTitle>
-            <IonButton slot="end" onClick={toggleVideoModal}>Fechar</IonButton>
+            <IonTitle style={{ textAlign: 'center' }}>Video</IonTitle>
+            <IonButton slot="end" onClick={toggleVideoModal}>Close</IonButton>
           </IonToolbar>
         </IonHeader>
         <IonContent>

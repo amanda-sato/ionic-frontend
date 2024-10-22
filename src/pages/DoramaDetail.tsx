@@ -17,7 +17,7 @@ const DoramaDetail: React.FC<{ products: { id: number, name: string, description
   const product = products.find(p => p.id === parseInt(productId));
 
   if (!product) {
-    return <p>Produto não encontrado.</p>;
+    return <p>Product not found!</p>;
   }
 
   return (
@@ -58,7 +58,7 @@ const DoramaDetail: React.FC<{ products: { id: number, name: string, description
 
 
           <IonButton routerLink="/doramas" style={{ marginTop: '20px' }}>
-            Voltar para Lista de Doramas
+              Return to List of Dramas
           </IonButton>
 
           </IonCard>
