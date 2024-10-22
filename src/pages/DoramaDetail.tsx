@@ -57,9 +57,7 @@ const DoramaDetail: React.FC<{ products: { id: number, name: string, description
         <IonCardContent>{product.description}</IonCardContent> 
 
 
-          <IonButton routerLink="/doramas" style={{ marginTop: '20px' }}>
-              Return to List of Dramas
-          </IonButton>
+          
 
           </IonCard>
 
