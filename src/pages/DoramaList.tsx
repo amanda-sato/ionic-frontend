@@ -33,7 +33,7 @@ const DoramaList: React.FC<{ products: { id: number, name: string, description: 
   }
 
   return (
-    <IonPage>
+    <IonPage style={{ backgroundImage: `url('/sakura.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <IonHeader>
         <IonToolbar>
         <IonButtons slot="start">
